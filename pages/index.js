@@ -96,6 +96,19 @@ export default function Home() {
         </section>
       )}
 
+      {user && !userData && !loading && (
+        <section className="section-container">
+          <button
+            className="flex items-center justify-between gap-1 text-xs btn btn-primary"
+            onClick={showAddWeightModalHandler}
+          >
+            <HiOutlineDocumentAdd className="text-xl" /> Add Weight
+          </button>
+          <h3 className="py-4">Nothing to show.. yet</h3>
+          <p className="">Add your weight to begin...</p>
+        </section>
+      )}
+
       {user && userData && (
         <>
           <section className="section-container">
